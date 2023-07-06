@@ -1,0 +1,20 @@
+# Training configs for Seg
+
+dataset : Oil Dataset
+channels : 9
+n_classes : 2
+ignore_index : 255
+net : DeepLab
+optimizer : Adam
+scheduler : StepLR
+lr : 0.0001
+batchsize : 4
+start_epoch : 0
+end_epoch : 100
+result_dir : "./deeplabTest/eventfiles-deeplab-channels9"
+criterion : crossentropy
+logIterval : 20
+valIterval : 2
+resume :
+  flag : Ture
+  state_path : "F:/deeplabv3+训练模型/eventfiles-deeplab-channels9/DeepLab-ep90.pth"
